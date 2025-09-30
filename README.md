@@ -21,7 +21,7 @@ PyCloak is a command-line tool designed to protect your Python intellectual prop
 As the project is under development, it is not yet available on PyPI. To install it, clone the repository directly:
 
 ```bash
-git clone [https://github.com/your-username/pycloak.git](https://github.com/your-username/pycloak.git)
+git clone [https://github.com/your-username/pycloak.git](https://github.com/vasudevkishor/pycloak.git)
 cd pycloak
 pip install .
 ```
