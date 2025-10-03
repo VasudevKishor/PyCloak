@@ -1,8 +1,8 @@
-class _gPzv:
+class _u1ac:
 
-    def _eMTr(self, name):
+    def _JvNl(self, name):
         message = f'Hello, {name}! Welcome.'
         return message
 
-def _f3qc():
+def _GgUj():
     return 123
