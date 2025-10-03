@@ -1,8 +1,12 @@
 README.md
 pyproject.toml
 src/pycloak/__init__.py
+src/pycloak/cli.py
+src/pycloak/discoverer.py
 src/pycloak/transformers.py
 src/pycloak.egg-info/PKG-INFO
 src/pycloak.egg-info/SOURCES.txt
 src/pycloak.egg-info/dependency_links.txt
+src/pycloak.egg-info/entry_points.txt
+src/pycloak.egg-info/requires.txt
 src/pycloak.egg-info/top_level.txt
