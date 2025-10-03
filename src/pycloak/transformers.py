@@ -50,3 +50,39 @@ class NameApplier(ast.NodeTransformer):
         if node.id in self.rename_map:
             node.id = self.rename_map[node.id]
         return node
+
+class GlobalRenamer(ast.NodeTransformer):
+    """
+    Applies a global rename map to function and class definitions,
+    and also to the names used in function calls and attribute access.
+    """
+    def __init__(self, rename_map):
+        self.rename_map = rename_map
+
+    def visit_FunctionDef(self, node: ast.FunctionDef):
+        # Rename the function definition itself
+        if node.name in self.rename_map:
+            node.name = self.rename_map[node.name]
+        # Important: continue traversing inside the function
+        self.generic_visit(node)
+        return node
+
+    def visit_ClassDef(self, node: ast.ClassDef):
+        # Rename the class definition itself
+        if node.name in self.rename_map:
+            node.name = self.rename_map[node.name]
+        self.generic_visit(node)
+        return node
+
+    def visit_Name(self, node: ast.Name):
+        # Rename variable names that might be class instantiations
+        if node.id in self.rename_map:
+            node.id = self.rename_map[node.id]
+        return node
+
+    def visit_Attribute(self, node: ast.Attribute):
+        # Rename attributes (e.g., method names in `obj.method()`)
+        if node.attr in self.rename_map:
+            node.attr = self.rename_map[node.attr]
+        self.generic_visit(node)
+        return node
