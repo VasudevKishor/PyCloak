@@ -1,13 +1,13 @@
-# PyCloak
+````markdown
+# Astroud 
 
 **A powerful and modern obfuscator for Python source code.**
 
-
 > ** Project Status: Under Heavy Development **
 >
-> PyCloak is currently in an early development phase. The API is subject to change.
+> Astroud is currently in an early development phase. The API is subject to change.
 
-PyCloak is a command-line tool designed to protect your Python intellectual property by transforming readable source code into a functionally identical but difficult-to-understand format. It uses advanced techniques based on Python's Abstract Syntax Tree (AST) to provide robust obfuscation.
+Astroud is a command-line tool designed to protect your Python intellectual property by transforming readable source code into a functionally identical but difficult-to-understand format. It uses advanced techniques based on Python's Abstract Syntax Tree (AST) to provide robust obfuscation.
 
 ## Key Features
 
@@ -21,22 +21,23 @@ PyCloak is a command-line tool designed to protect your Python intellectual prop
 As the project is under development, it is not yet available on PyPI. To install it, clone the repository directly:
 
 ```bash
-git clone [https://github.com/your-username/pycloak.git](https://github.com/vasudevkishor/pycloak.git)
-cd pycloak
+git clone [https://github.com/your-username/astroud.git](https://github.com/your-username/astroud.git)
+cd astroud
 pip install .
-```
+````
 
 ## Usage
 
-PyCloak is used via its command-line interface. The most basic usage is to provide a source directory and an output directory.
+Astroud is used via its command-line interface. The most basic usage is to provide a source directory and an output directory.
 
 ```bash
-pycloak --source ./my_project --output ./dist
+astroud --source ./my_project --output ./dist
 ```
 
 ### Example
 
 **Before Obfuscation (`my_project/main.py`):**
+
 ```python
 class Calculator:
     def add(self, num1, num2):
@@ -50,6 +51,7 @@ if __name__ == "__main__":
 ```
 
 **After Obfuscation (`dist/main.py`):**
+
 ```python
 import base64
 _d = ['VGhlIHJlc3VsdCBpczoge30=']
@@ -75,9 +77,11 @@ if __name__ == '__main__':
 
 ## Disclaimer
 
-Obfuscation is a deterrent, not a foolproof security measure. A determined and skilled attacker can still reverse-engineer the code. PyCloak is intended to protect against casual inspection and to significantly raise the bar for reverse-engineering. This tool should be used for protecting legitimate intellectual property and not for creating malware.
-
+Obfuscation is a deterrent, not a foolproof security measure. A determined and skilled attacker can still reverse-engineer the code. Astroud is intended to protect against casual inspection and to significantly raise the bar for reverse-engineering. This tool should be used for protecting legitimate intellectual property and not for creating malware.
 
 ## Contributing
 
-Contributions, issues, and feature requests are welcome!
+Contributions, issues, and feature requests are welcome\!
+
+```
+```
